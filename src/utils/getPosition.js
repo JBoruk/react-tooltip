@@ -91,6 +91,7 @@ export default function(e, target, node, place, desiredPlace, effect, offset) {
   if (inside(desiredPlace) && shouldUpdatePlace) {
     isNewState = true;
     newPlace = desiredPlace;
+    console.log({newPlace, desiredPlace})
   } else if (
     insideList.length > 0 &&
     outside(desiredPlace) &&
@@ -98,6 +99,7 @@ export default function(e, target, node, place, desiredPlace, effect, offset) {
   ) {
     isNewState = true;
     newPlace = insideList[0];
+    console.log({newPlace, desiredPlace})
   }
 
   if (isNewState) {
